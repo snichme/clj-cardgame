@@ -1,0 +1,9 @@
+;; resources/migrations/001-foo.edn
+{:up   [
+        "create table cards (id SERIAL PRIMARY key, title varchar (50), description text);"
+        "insert into cards (title, description) values ('Card 1', 'Some desc 1');"
+        "insert into cards (title, description) values ('Card 2', 'Some desc 2');"
+        "insert into cards (title, description) values ('Card 3', 'Some desc 3');"
+
+        ]
+ :down ["drop table cards;"]}
